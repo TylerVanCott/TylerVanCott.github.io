@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forms Assurance Forms Grid</title>
+<link rel="icon" type="image/png" href="C:\Program Files (x86)\TV's Form Grid/images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="C:\Program Files (x86)\TV's Form Grid/formGrid.css">
+<link rel="stylesheet" type="text/css" href="C:\Program Files (x86)\TV's Form Grid/customStyles.css">
+
+</head>
+<body>
+<div id="helper"></div>
+<div id="container">
+<div id="header">
+	<div id="top">
+
+		<div class="left" id="title">Forms Assurance Forms Grid</div>
+		<div class="right"><input id="search" oninput="init()" placeholder="Search" /></div>
+	</div>
+	<div id="bottom">
+		<ul class="left">
+			<li><a href="#" onclick="showHide('instructions');">Instructions</a></li>
+			<li><a href="#" onclick="showHide('options');">Options</a></li>
+			<li><a href="#" onclick="showHide('overlay');">Globals</a></li>
+		</ul>
+		<ul class="right">
+			<li><a href="#" id="btn-download" download="test">Download Image</a></li>
+			<li><a href="javascript:window.print()">Print Page</a></li>
+			</ul>
+	</div>
+</div><div id="content">
+<textarea required autofocus wrap="off" spellcheck="false" oninput="init()" id="input" cols="66" rows="60"></textarea>
+<div id="bgimage">
+	<div class="title">Background Image<input class="right" id="formTitle" /></div>
+	<div class="body">
+	<select id="imageSelect" class="right" size="5" onChange="changeImage();return false;" style="min-width:200px;"></select>
+	<label for="fileInput">Select an image for the form background.</label>
+	<br />
+<input type="file" id="fileInput">
+<br /><br />
+
+	<label for="bgClear">Remove the background.</label>
+	<br />
+<input type="button" id="bgClear" onclick="bg.clear()" value="Clear Image">
+
+
+</div>
+</div>
+<div id="instructions">
+<div class="title">Instructions<a id="close" class="right" href="#" onclick="showHide('instructions');">CLOSE</a></div>
+	<pre class="body">
+ Go into DG/2 and locate your form.
+ Rather than using option 7 to view a form
+ Use option 9 (list)
+ Then select Output Type -> "txt" -> send the email to yourself.
+ Once you've received the email, copy the contents here
+ Then everything will display below.
+Use notes:
+ 
+ You can hover over a field to see the line position
+ 
+Known issue:
+ 1)This tool does not work with Internet Explorer at all.
+  -Use Chrome of Firefox
+  
+System limitations:
+ 1)The form report does not include conditions inside of formulas.
+ 2)The report can't be ran from a store with the standard flag on.
+ 3)If on server P, the system sends a blank report.
+  
+If you find any issues or bugs or have any sugestions
+please contact me in person or at Tyler.Vancott@coxautoinc.com
+	</pre>
+</div>
+<div id="options">
+	<div class="title">Options<a id="close" class="right" href="#" onclick="showHide('options');">CLOSE</a></div>
+	<div class="body">
+		<!--<input type="checkbox" id="altparse" onchange="updateOptions(this)"><label for="altparse">Alternate Parse</label>
+	<br />
+	This option allows for copy-pasting from each page of the form into the forms grid when the store is standard.
+	<br />
+	<br />
+		-->
+	<input type="checkbox" id="hideText" onchange="updateOptions(this)"><label for="hideText">Hide Text:</label>
+	<br />
+	This option will hide all text on the form, leaving only the background highliting.
+	<br />
+	<br />
+	<input type="checkbox" id="checker" onchange="updateOptions(this)"><label for="checker">Checkered BG:</label>
+	<br />
+	This option add a checkered background. each checker square is 1 character
+	<br />
+	<br />
+
+	<input type="checkbox" id="hidefield" onchange="updateOptions(this)"><label for="hidefield">Hide Field:</label> <input type="text" id="hidefieldtext" oninput="init()" value="ZNA ZBLANK" disabled>
+	<br />
+	This option hides any fields that are typed in the box.
+	<br />
+	<br />
+	<!--
+	<input type="checkbox" id="lastdigit" onchange="updateOptions(this)"><label for="lastdigit">Print only last Character for 1 digit fields (EG: IMVIN01 - 17)</label>
+	<br />
+	This option is not yet finished.
+	
+	<br />
+	<br />
+	
+	<input type="checkbox" id="lines" onchange="updateOptions(this)"><label for="lines">draw vertical and horozontal lines where the mouse is (for mark)</label>
+	<br />
+	This option is not yet finished.
+	
+	<br />
+	<br />
+	
+	<input type="checkbox" id="rental" onchange="updateOptions(this)"><label for="rental">highlight IN vs. OUT on rental agreements</label>
+	<br />
+	This option is not yet finished.
+	
+	<br />
+	<br />
+	-->
+
+	</div>
+</div>
+<div id="changelog">
+	<div class="title">Change Log<a id="close" class="right" href="#" onclick="showHide('changelog');">CLOSE</a></div>
+<!--
+TODO
+
+enter docID on alt parse
+
+DETECT BROKEN FORMULS (FIELD DOES NOT EXIST)
+DETECT UNUSED FORMULAS
+
+add options
+	Hide Field
+	only last character for 1 digit fields
+	rental agreement
+	lines
+	stylesheet switching
+		cookie support
+		
+B1/B2/B3
+
+GLOBAL
+	9 on global
+	include all conditions global.js
+	
+fix *FIELDS and BMGCAP..
+	include reccomended globals
+
+
+better SHOW/HIDE function
+popup window for instruction/video
+
+
+change LAYOUT to object throughout JS for better readability
+before & after differences
+
+maybe..
+click&drag for output
+
+
+-->
+	<pre id="log">
+10/23/2018
+   *Downloaded existing files from Sharepoint of the remnants of what was Ren's Form Grid. 
+   
+  11/1/2018
+   *Corrected File locations to work generically on all systems & Also revamped scripting to allow the first 2 characters of 
+   all fields show in the grid.
+
+
+	</pre>
+</div>
+<div id="error"><div class="title redbg">Errors on form</div><pre class="body" id="errorText"></pre></div>
+<canvas id="output" width="730" height="891">Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<div id="tooltip">test</div>
+</div>
+<div id="overlay">
+	<div class="title">Globals<a id="close" class="right" href="#" onclick="showHide('overlay');return false;">CLOSE</a></div>
+	<div class="body" id="overlayTop">
+		<table>
+			<tr>
+				<td>
+					<b>CONSTANTS</b><BR />
+					<select id="globalConstant" size="5" onChange="showGlobal({RTYP:'C',FLDN:this.value});return false;" style="min-width:200px;"></select>
+				</td>
+				<td>
+					<b>FORMULAS</b><BR />
+					<select id="globalFormula" size="5" onChange="showGlobal({RTYP:'F',FLDN:this.value});return false;" style="min-width:200px;"></select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">THESE ARE THE <B>STANDARD</B> GLOBALS. NOT THE ONES FROM THIS STORE.</td>
+			</tr>
+		</table>
+	</div>
+<div class="body" id="overlayBottom"></div>
+</div>
+<div id="footer">
+<ul>
+<li><a href="#" onclick="showHide('changelog');">Change Log</a></li><li><a href="mailto:tyler.vancott@coxautoinc.com?subject=Forms%20Grid%20Feedback">Feedback</a></li>
+</ul>
+</div>
+
+<script type="text/javascript" src="C:\Program Files (x86)\TV's Form Grid/images.js"></script>
+<script type="text/javascript" src="C:\Program Files (x86)\TV's Form Grid/GLOBAL.js"></script>
+<script type="text/javascript" src="C:\Program Files (x86)\TV's Form Grid/formGrid.js"></script>
+
+<!--[if IE]>
+<script type="text/javascript">
+var err="You are using Internet Explorer,\nIE does not have support for the HTML5 canvas tag,\n\nPlease use either chrome or firefox.";
+alert(err);
+showError(err);
+</script>
+<![endif]-->
+</body>
+</html>
