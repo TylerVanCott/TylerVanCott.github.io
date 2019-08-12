@@ -1,0 +1,63 @@
+
+
+.mark{
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG");
+    background-size: 100% auto;
+    background-attachment: fixed;
+}
+.mark, .mark *
+{
+    cursor:url("http://i1143.photobucket.com/albums/n635/1dners/Panda-1.png"), auto;
+}
+
+
+.mark #helper {
+        background:url("http://rs293.pbsrc.com/albums/mm58/bre_shelby1357/25fj1bd.gif~c200");
+
+}
+#helper{
+    display:block;
+    width: 200px;
+    height: 200px;
+    background-size: 100% auto;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    animation-name: updown, leftright;
+    animation-duration: 3.14159265359s, 2s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-timing-function:linear,linear;
+
+}
+
+.mark #container{
+    opacity: 0.9;
+}
+
+@keyframes updown {
+    0%   { top:0%; }
+    100% { top:calc(100% - 200px); }
+}
+@keyframes leftright {
+    0%   { left:0%; }
+    100% { left:calc(100% - 200px); }
+}
+@-moz-keyframes updown {
+    0%   { top:0%; }
+    100% { top:calc(100% - 200px); }
+}
+@-moz-keyframes leftright {
+    0%   { left:0%; }
+    100% { left:calc(100% - 200px); }
+}
+
+@-webkit-keyframes updown {
+    0%   { top:0%; }
+    100% { top:calc(100% - 200px); }
+}
+@-webkit-keyframes leftright {
+    0%   { left:0%; }
+    100% { left:calc(100% - 200px); }
+}
