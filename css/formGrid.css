@@ -1,0 +1,255 @@
+@media screen {
+	body,html {
+		width:100%;
+		padding: 0px;
+		margin:0px;
+		background: #ffffff;
+		color: #595a5c;
+		font: 12px 'OpenSans', Arial, sans-serif;
+	}
+	img{border:0px none;}
+	
+	a{
+		color:white;
+		text-decoration: underline;
+	}
+	a:hover{
+		color:#aaaaaa;
+	}
+	
+	
+	#container{
+		width:770px;
+		display:block;
+		margin:0px auto;
+		background: #eeeeee;
+	}
+	#header {
+		margin:0px;
+
+		background: #EBEBEA;
+	}
+	#header #top{
+		height:80px;
+		padding:0px 20px;
+	}
+	#header #top #title{
+		height:80px;
+		font: 20px/80px 'OpenSans', Arial, sans-serif;
+		font-weight:bold;
+		margin-left:20px;
+	}
+	#search{
+		margin:29px 0;
+		height:16px;
+	}
+	#header #bottom{
+		background-color: #1D2B34;
+		background-image: url(images/nav-bg-pattern.jpg);
+		height: 40px;
+	}
+	#header #bottom ul, #footer ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	#header #bottom ul, #footer ul{
+		display:inline;
+	}
+	.left, #header #bottom .left li{
+		float:left;
+	}
+	.right, #header #bottom .right li{
+		float:right;
+	}
+	#header #bottom a{
+		float:left;
+		color:#ffffff;
+		text-decoration:none;
+		font: 12px/40px 'OpenSans', Arial, sans-serif;
+		padding: 0 15px;
+	}
+	#header #bottom a:hover{
+		background-color: rgba(1,124,233,.75) !important;
+		color:#ffffff;
+	}
+	
+	@keyframes pulse {
+		0%   {	background-color:rgba(0,85,160,1);}
+		100% {	background-color:rgba(1,124,233,1);}
+	}
+	.new {
+
+		animation-name: pulse;
+		animation-duration: .3s;
+		animation-iteration-count: 8;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+
+		background: rgba(0,85,160,1) url('images/new.png') no-repeat bottom right;
+	}
+
+	#content {
+		padding:20px;
+		background-color: #D6D7D6;
+		background-image: linear-gradient(to top, #D6D7D6 99.4%, #C2C3C1 );
+	}
+	#content > div {
+	
+		box-shadow: 0px 0px 7px rgba(0,0,0,.6);
+		width:730px;
+		padding: 0;
+		margin:0 auto 20px;
+		display:none;
+		background-color: #f1f1f1;
+	}
+
+	#input {
+		height:150px;
+		width:726px;
+		overflow:auto;
+		display:block;
+		margin:0px 0px 20px;
+		border:0px;
+		background-color:#f1f1f1;
+		
+		box-shadow: 0px 0px 7px rgba(0,0,0,.6);
+	}
+	#input:invalid {
+		background:#f1f1f1 url('images/inputBG.png') no-repeat top left;
+	}
+
+
+	.title{
+		background-color: #0055A0;
+		color:#ffffff;
+		font: 12px/30px 'OpenSans', Arial, sans-serif;
+		padding: 0 15px;
+	}
+	.redbg{
+		background-color: #a00005 !important;
+	}
+	.body{
+		padding:10px;
+		margin:0px;
+	}
+	.body a {
+		color:blue;
+	}
+	label{
+		font-weight: bold;
+		cursor: pointer;
+	}
+	#changelog #log{
+		overflow:auto;
+		height:130px;
+		padding:10px;
+		margin:0px;
+	}
+	#error {
+
+		overflow:auto;
+		color:#ffffff ;
+		background-color: rgb(255,220,220);
+	}
+	#output {
+		background:#ffffff;
+		border:0px solid #d3d3d3;
+		box-shadow: 0px 0px 7px rgba(0,0,0,.6);
+		display:block;
+		margin:0 auto;
+	}
+	#tooltip{
+		font: 12px "courier new";
+		position:absolute;
+		background:#e5e5e5;
+		border:1px solid #888888;
+		display:none;
+		z-index:10000;
+		box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+		padding:1px 5px;
+	}
+	#tooltip pre {
+		padding:0;
+		margin:0;
+	}
+	#tooltip .fldn {
+		color:#1f1f20;
+	}
+	#tooltip .newline {
+		margin-top:4px;
+		border-top:1px dashed #aaa;
+		padding-top:4px;
+	}
+	#btn-download:hover i{
+		color:black;
+	}
+	#btn-download:hover p{
+		color:transparent;
+	}
+	#overlay{
+		display:none;
+		position:fixed;
+		top:0;
+		bottom:0;
+		right: 0;
+  		left: 0;
+		margin: auto;
+		width:600px;
+		height:500px;
+
+		background:#ffffff;
+		box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	}
+	#overlay input{
+		font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+	}
+	#overlay table{
+		margin:0px auto;
+	}
+	#overlay td[colspan='3']{
+		text-align:right;
+	}
+
+
+	#footer {
+		background-color: #1d2b34;
+		text-align:center;
+		color: white;
+		font: 12px/40px 'OpenSans', Arial, sans-serif;
+		height:40px;
+	}
+	#footer ul, #footer li {
+		padding:20px auto;
+		display:inline;
+	}
+	#footer li+li:before {
+		color:#aaaaaa;
+		content: "|";
+		padding: 0 10px;
+	}
+
+}
+@media print {
+	#header, #btn-download, #tooltip, #input, #bgimage, #instructions, #options, #changelog, #overlay, #footer{
+		display: none !important;
+		width:0px;
+		height:0px;
+	}
+	#output{
+		position: absolute;
+		width: 106%;
+		left: -5%;
+		top: 0px;
+		margin: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+	body{
+		margin: 0;
+		padding: 0 0;
+	}
+	@page {
+		margin: 0.5cm;
+		padding: 0;
+	}
+}
