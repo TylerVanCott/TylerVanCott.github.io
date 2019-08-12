@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>Forms Assurance Forms Grid</title>
 <link rel="icon" type="image/png" href="https://github.com/TylerVanCott/TylerVanCott.github.io/master/images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/TylerVanCott/TylerVanCott.github.io/master/formGrid.css">
-<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/TylerVanCott/TylerVanCott.github.io/master/customStyles.css">
+<link rel="stylesheet" type="text/css" href="https://raw.github.com/TylerVanCott/TylerVanCott.github.io/master/formGrid.css">
+<link rel="stylesheet" type="text/css" href="https://raw.github.com/TylerVanCott/TylerVanCott.github.io/master/customStyles.css">
 
 </head>
 <body>
@@ -205,9 +205,9 @@ click&drag for output
 </ul>
 </div>
 
-<script type="text/javascript" src="https://raw.githubusercontent.com/TylerVanCott/TylerVanCott.github.io/master/images.js"></script>
-<script type="text/javascript" src="https://raw.githubusercontent.com/TylerVanCott/TylerVanCott.github.io/master/GLOBAL.js"></script>
-<script type="text/javascript" src="https://raw.githubusercontent.com/TylerVanCott/TylerVanCott.github.io/master/formGrid.js"></script>
+<script type="text/javascript" src="https://raw.github.com/TylerVanCott/TylerVanCott.github.io/master/images.js"></script>
+<script type="text/javascript" src="https://raw.github.com/TylerVanCott/TylerVanCott.github.io/master/GLOBAL.js"></script>
+<script type="text/javascript" src="https://raw.github.com/TylerVanCott/TylerVanCott.github.io/master/formGrid.js"></script>
 
 <!--[if IE]>
 <script type="text/javascript">
