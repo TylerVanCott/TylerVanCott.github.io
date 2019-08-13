@@ -1,4 +1,24 @@
 
+/* Image Header - Partial Width
+------------------------------------------------------------ */
+ 
+.header-image #title-area,
+.header-image #title,
+.header-image #title a {
+    display: block;
+    float: left;
+    height: 90px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 350px;
+}
+ 
+.header-image #description {
+    display: block;
+    overflow: hidden;
+}
+
 
 .mark{
     background-image:url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG");
