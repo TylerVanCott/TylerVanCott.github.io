@@ -5,6 +5,8 @@
 .header-image #title-area,
 .header-image #title,
 .header-image #title a {
+    background: url( 'images/favicon.png' ) no-repeat;
+}
     display: block;
     float: left;
     height: 90px;
